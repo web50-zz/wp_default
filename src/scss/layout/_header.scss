@@ -1,0 +1,99 @@
+.header{
+    padding-top: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9;
+    transition: all 0.1s;
+    @media(max-width: 992px){
+        background: var(--color-three);
+        padding: 20px 15px 15px;
+        position: fixed;
+        
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        z-index: 9;
+        position: relative;
+        .logo{
+            width: 173px;
+            height: 70px;
+            display: block;
+            @media(max-width: 992px){
+                width: 93px;
+                height: 41px;
+            }
+            svg{
+                width: 100%;
+                height: 100%;
+                fill: #000000;
+                margin-left: -7px;
+                @media(max-width: 992px){
+                    fill: #FFF;
+                }
+            }
+        }
+        .buter{
+            width: 52px;
+            height: 44px;
+            cursor: pointer;
+            overflow: hidden;
+            @media(max-width: 992px){
+                width: 35px;
+                
+                //height: 41px;
+            }
+            svg{
+                width: 100%;
+                height: 100%;
+                fill: #1D1D1B;
+                @media(max-width: 992px){
+                    fill: #FFF;
+                }
+            }
+        }
+        @media(max-width:992px){
+            overflow: hidden;
+        }
+    }
+    &__white{
+        .container{
+            .logo{
+                svg{
+                    fill: #FFF;
+                }
+            }
+            .buter{
+                svg{
+                    fill: #FFF;
+                }
+            }
+        }
+        
+    }
+    &__menu-opened{
+        //background: var(--color-three);
+        .container{
+            .logo{
+                svg{
+                    fill: #FFF;
+                }
+            }
+            .buter{
+                svg{
+                    fill: #FFF;
+                }
+            }
+        }
+    }
+}
+
+main.simple-header{
+    margin-top: 200px;
+    @media(max-width: 992px){
+        margin-top: 100px;
+    }
+}

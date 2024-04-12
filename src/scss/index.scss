@@ -1,0 +1,58 @@
+@import '../fonts/gilroy/index.css';
+@import './abstract/';
+@import "./layout/";
+@import "./components/";
+@import "./utils/";
+@import "./pages/";
+
+
+html,body{
+    font-family: var(--main-font);
+    font-size: var(--font-size-main);
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: var(--color-three);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch
+}
+a{
+    color: inherit;
+}
+.container{
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    &:not(.allow-overflow){
+        //overflow-x: hidden;
+    }
+    @media(max-width: 1740px){
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    @media(max-width: 1280px){
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @media(max-width:992px){
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.no-mobile{
+    @media(max-width: 992px){
+        display: none;
+    }
+}
+.only-mobile{
+    @media(min-width: 992px){
+        display: none;
+    }
+}
+

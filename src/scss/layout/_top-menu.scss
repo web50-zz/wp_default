@@ -1,0 +1,132 @@
+.top-menu{
+    background-color: var(--color-three);
+    color: #FFFFFF;
+    font-size: 30px;
+    text-transform: uppercase;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    padding: 230px 70px 70px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    display: none;
+    height: 100vh;
+    @media(max-width: 992px){
+        font-size: 20px;
+        padding: 20px;
+        height: 100vh;
+        top: 60px;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    &__logo{
+        display: block;
+        width: 173px;
+        height: 76px;
+        @media(max-width: 992px){
+            width: 93px;
+            height: 41px;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+            fill: #FFF;
+        }
+    }
+    &__decor{
+        position: absolute;
+        top: 30%;
+        z-index: -1;
+        left: 260px;
+        outline: none;
+        cursor: none;
+        @media(max-width: 992px){
+            left: 40px;
+        }
+    }
+    &__wrapper{
+        position: relative;
+    }
+    &__close{
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+        &:before{
+            width: 100%;
+            height: 100%;
+            content: '\2715';
+            font-size: 40px;
+            line-height: 1em;
+        }
+    }
+    &__close2{
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        display: none;
+        margin-right: 15px;
+        &:before{
+            width: 100%;
+            height: 100%;
+            content: '\2715';
+            font-size: 45px;
+            line-height: 1em;
+            color: #FFF;
+            font-weight: 900;
+            @media(max-width: 992px){
+                font-size: 40px;
+            }
+        }
+        @media(max-width: 992px){
+            margin-right: 10px;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        list-style: none;
+        padding: 0px;
+        margin: -20px 0 0 260px;
+        @media(max-width: 992px){
+            margin: 40px 0 0 40px;
+        }
+        a{
+            align-items: center;
+            position: relative;
+            display: inline-flex;
+            transition: all 0.5s;
+            &:before{
+                content: ' ';
+                height: 1px;
+                border-bottom: 3px solid var(--color-two);
+                position: absolute;
+                top: calc(50% - 2px);
+                width: calc(100% + 2px);
+                opacity: 0;
+                transition: all 0.5s;
+                z-index: -1;
+            }
+            &:hover{
+                color: var(--color-four);
+                &:before{
+                    opacity: 1;
+                }
+            }
+            
+        }
+        .current_page_item{
+            a{
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
