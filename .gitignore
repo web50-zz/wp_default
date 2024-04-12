@@ -1,5 +1,5 @@
 node_modules
-#assets/images/
+assets/images/
 !assets/images/index.php
-#assets/videos/
+assets/videos/
 !assets/videos/index.php
