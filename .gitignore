@@ -3,3 +3,5 @@ assets/images/
 !assets/images/index.php
 assets/videos/
 !assets/videos/index.php
+assets/fonts/
+!assets/fonts/index.php
